@@ -1,0 +1,12 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="course1" class="main.CourseOrganizer" autowire="no">
+		<property ref="course" name="Course"></property></bean>
+<!-- 		<constructor-arg ref="Java" name="Course"></constructor-arg> -->
+	<bean id="course" class="course.JavaCourse" primary="true"></bean>
+	<bean id="springBoot" class="course.SpringBootCourse"></bean>
+</beans>
